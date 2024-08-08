@@ -1,0 +1,148 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #2d3436;
+}
+
+.player-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.player-form input, .player-form button {
+    padding: 10px;
+    border: 2px solid #dfe6e9;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.player-form button {
+    background-color: #0984e3;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.player-form button:hover {
+    background-color: #74b9ff;
+}
+     
+.player-form button:hover {
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+   
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .player-form button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+.container {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.player-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #74b9ff;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.player-card div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-card .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.player-card .actions div {
+    padding: 5px 10px;
+    background-color: #0984e3;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.player-card .actions div:hover {
+    background-color: #e17055;
+}
+
+.player-card .actions .inc {
+    background-color: #00b894;
+}
+
+.player-card .actions .dec {
+    background-color: #e17055;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
